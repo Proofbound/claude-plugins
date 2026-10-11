@@ -6,6 +6,7 @@ Public Claude Code marketplace for ProofBound (`/plugin marketplace add Proofbou
 
 - `plugins/proofbound/skills/` is GENERATED. Never edit it here; edit the skill in the private `proofbound-monorepo` and run its `scripts/sync-public-plugins.sh`. That script's `PUBLIC_SKILLS` decides what ships.
 - Only skills whose real work runs on the ProofBound server belong here. A skill that works locally (e.g. book-index) is given away once its source is public — keep it out.
-- Other entries point at their own public repos (`source: github`); this repo only lists them.
+- Every `source` is absolute (`git-subdir` for our own plugin, `github` for the others), never `./...`: proofbound.com/workshop/marketplace.json is this same file proxied by the worker-router, and a URL-added marketplace cannot resolve relative paths.
+- Other entries point at their own public repos; this repo only lists them.
 - Bump `version` in `plugins/proofbound/.claude-plugin/plugin.json` on every sync, or installed users won't see the update.
 - Validate before pushing: `claude plugin validate .`

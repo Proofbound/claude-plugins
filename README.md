@@ -5,6 +5,8 @@
 /plugin install proofbound@proofbound
 ```
 
+Or, equivalently: `/plugin marketplace add https://proofbound.com/workshop/marketplace.json`
+
 | Plugin | What it does |
 |---|---|
 | `proofbound` | Write a book in conversation with Claude, then publish it to your ProofBound library. ProofBound renders the PDF and stores the book. Needs a [ProofBound](https://proofbound.com) account; sign-in is a browser device flow. |

@@ -1,26 +1,39 @@
 {
   "name": "proofbound",
-  "owner": { "name": "ProofBound", "url": "https://proofbound.com" },
+  "owner": {
+    "name": "ProofBound",
+    "url": "https://proofbound.com"
+  },
   "metadata": {
     "description": "Claude Code plugins from ProofBound: write and publish books, research sources, and turn photos into essays."
   },
   "plugins": [
     {
       "name": "proofbound",
-      "source": "./plugins/proofbound",
+      "source": {
+        "source": "git-subdir",
+        "url": "https://github.com/Proofbound/claude-plugins.git",
+        "path": "plugins/proofbound"
+      },
       "description": "Write a book in conversation with Claude, then publish it to your ProofBound library. ProofBound renders the PDF and stores the book. Requires a ProofBound account.",
       "homepage": "https://proofbound.com",
       "category": "productivity"
     },
     {
       "name": "book-research",
-      "source": { "source": "github", "repo": "Proofbound/book-research-skill" },
+      "source": {
+        "source": "github",
+        "repo": "Proofbound/book-research-skill"
+      },
       "description": "Build a book's pre-writing source dossier: scholarly search, a real BibTeX library, and a filed, indexed materials/ folder.",
       "category": "productivity"
     },
     {
       "name": "photo-essay",
-      "source": { "source": "github", "repo": "Proofbound/photo-essay-skill" },
+      "source": {
+        "source": "github",
+        "repo": "Proofbound/photo-essay-skill"
+      },
       "description": "Turn a folder of photos into a magazine-style HTML photo essay.",
       "category": "productivity"
     }
