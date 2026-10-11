@@ -36,6 +36,20 @@
       },
       "description": "Turn a folder of photos into a magazine-style HTML photo essay.",
       "category": "productivity"
+    },
+    {
+      "name": "conference-booth-report",
+      "source": {
+        "source": "github",
+        "repo": "Proofbound/conference-booth-report"
+      },
+      "description": "Turn a folder of trade-show booth photos into a self-contained, emailable HTML report that identifies each exhibitor from its signage.",
+      "version": "1.1.0",
+      "category": "productivity",
+      "strict": false,
+      "skills": [
+        "./"
+      ]
     }
   ]
 }
